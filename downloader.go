@@ -47,5 +47,8 @@ func saveFileFromURL(fileName string, URL string) {
 	defer resp.Body.Close()
 
 	_, err = io.Copy(out, resp.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Printf("Done downloading '%s'!\n", fileName)
 }

@@ -13,9 +13,11 @@ import (
 
 func parse() {
 	fmt.Println("Parsing game files!")
-	parseCollections()
+	collectionsByName := parseCollections()
+	fmt.Println(collectionsByName)
 }
 
+// Collection type
 type Collection struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
@@ -25,7 +27,16 @@ type Collection struct {
 	Tag      string `json:"tag"`
 }
 
-func parseCollections() {
+// Weapon type
+type Weapon struct {
+	ID   int
+	Name string
+	Type string
+	Desc string
+	Tag  string
+}
+
+func parseCollections() map[string]*Collection {
 	// Get actual collections from gamefiles
 	text := getTextBetweenLines("storage/csgo_english.txt", "// SET DESCRIPTIONS", "/////////////////")
 	vdf := parseVdf(text)
@@ -53,6 +64,8 @@ func parseCollections() {
 			log.Fatalf("Error parsing collections: %s (%s) was not found in resources/collections.json, make sure to add it manually.", key, value)
 		}
 	}
+
+	return collectionsByName
 }
 
 func parseVdf(lines []string) map[string]string {

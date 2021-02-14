@@ -1,5 +1,7 @@
 # CS:GO Item Loader
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/JRaams/csgo-item-loader)](https://goreportcard.com/report/github.com/JRaams/csgo-item-loader) [![License](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+
 ## 1. Description
 
 Parses CS:GO items from game files into api-ready json.
