@@ -18,7 +18,7 @@ func main() {
 				Aliases:     []string{"d"},
 				Description: "download game files",
 				Action: func(c *cli.Context) error {
-					fmt.Println("Downloading game files!")
+					download()
 					return nil
 				},
 			},

@@ -16,7 +16,7 @@ $ go build # -> csgo-item-loader executable
 
 # Commands
 
-# 1. Download game files to disk
+# 1. Download game files to ./storage/
 - 'download' (alias 'd')
 $ ./csgo-item-loader download
 
