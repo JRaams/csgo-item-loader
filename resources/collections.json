@@ -502,5 +502,37 @@
     "stattrak": true,
     "souvenir": false,
     "tag": "The Fracture Collection"
+  },
+  {
+    "id": 63,
+    "name": "CSGO_set_community_27",
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Control Collection"
+  },
+  {
+    "id": 64,
+    "name": "CSGO_set_op10_ct",
+    "released": "3 December 2020",
+    "stattrak": true,
+    "souvenir": false,
+    "tag": "The Operation Broken Fang Collection"
+  },
+  {
+    "id": 65,
+    "name": "CSGO_set_op10_t",
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Havoc Collection"
+  },
+  {
+    "id": 66,
+    "name": "CSGO_set_op10_ancient",
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Ancient Collection"
   }
 ]
