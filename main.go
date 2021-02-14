@@ -27,7 +27,7 @@ func main() {
 				Aliases:     []string{"p"},
 				Description: "parse game files into txt files",
 				Action: func(c *cli.Context) error {
-					fmt.Println("Parsing game files!")
+					parse()
 					return nil
 				},
 			},

@@ -11,6 +11,7 @@ import (
 var toDownload = map[string]string{
 	"items_game.txt":     "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game.txt",
 	"items_game_cdn.txt": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game_cdn.txt",
+	"csgo_english.txt":   "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/resource/csgo_english.txt",
 }
 
 func download() {
