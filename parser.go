@@ -12,9 +12,13 @@ import (
 )
 
 func parse() {
-	fmt.Println("Parsing game files!")
-	collectionsByName := parseCollections()
-	fmt.Println(collectionsByName)
+	// fmt.Println("Parsing collections files!")
+	// collectionsByName := parseCollections()
+	// fmt.Println(collectionsByName)
+
+	fmt.Println("Parsing weapons")
+	weapons := parseWeapons()
+	fmt.Println(weapons)
 }
 
 // Collection type
@@ -68,6 +72,13 @@ func parseCollections() map[string]*Collection {
 	return collectionsByName
 }
 
+func parseWeapons() []*Weapon {
+	text := getTextBetweenLines("storage/items_game.txt", "\"items\"", "\"attributes\"")
+	fmt.Println(text)
+
+	return nil
+}
+
 func parseVdf(lines []string) map[string]string {
 	vdf := map[string]string{}
 
@@ -104,24 +115,39 @@ func getTextBetweenLines(file string, start string, end string) []string {
 	}
 
 	var lines []string
-	startSaving := false
+	startIndent := -1
 
 	r := bufio.NewReader(f)
 	bytes, _, err := r.ReadLine()
 	for err == nil {
-		line := strings.TrimSpace(string(bytes[:]))
-		if line == start {
-			startSaving = true
+		line := string(bytes[:])
+		if strings.TrimSpace(line) == start {
+			startIndent = countLeadingSpace(string(bytes))
 		}
-		if startSaving {
+		if startIndent != -1 {
 			if line == end {
-				return lines
+				if endIndent := countLeadingSpace(string(bytes)); endIndent == startIndent {
+					return lines
+				}
 			}
-
 			lines = append(lines, line)
 		}
 		bytes, _, err = r.ReadLine()
 	}
 
 	return lines
+}
+
+func countLeadingSpace(line string) int {
+	i := 0
+	for _, rune := range line {
+		if rune == '	' {
+			i += 4
+		} else if rune == ' ' {
+			i++
+		} else {
+			break
+		}
+	}
+	return i
 }
