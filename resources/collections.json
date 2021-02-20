@@ -345,7 +345,7 @@
   },
   {
     "id": 43,
-    "name": "CSGO_set_gamma_2",
+    "name": "CSGO_set_Gamma_2",
     "released": "18 August 2016",
     "stattrak": true,
     "souvenir": false,
@@ -481,6 +481,14 @@
   },
   {
     "id": 60,
+    "name": "CSGO_set_op9_characters",
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "Shattered Web Agents"
+  },
+  {
+    "id": 61,
     "name": "CSGO_set_community_23",
     "released": "18 November 2019",
     "stattrak": true,
@@ -488,7 +496,7 @@
     "tag": "The Shattered Web Collection"
   },
   {
-    "id": 61,
+    "id": 62,
     "name": "CSGO_set_community_25",
     "released": "31 March 2020",
     "stattrak": true,
@@ -496,7 +504,7 @@
     "tag": "The Prisma 2 Collection"
   },
   {
-    "id": 62,
+    "id": 63,
     "name": "CSGO_set_community_26",
     "released": "6 August 2020",
     "stattrak": true,
@@ -504,7 +512,7 @@
     "tag": "The Fracture Collection"
   },
   {
-    "id": 63,
+    "id": 64,
     "name": "CSGO_set_community_27",
     "released": "3 December 2020",
     "stattrak": false,
@@ -512,7 +520,7 @@
     "tag": "The Control Collection"
   },
   {
-    "id": 64,
+    "id": 65,
     "name": "CSGO_set_op10_ct",
     "released": "3 December 2020",
     "stattrak": true,
@@ -520,7 +528,7 @@
     "tag": "The Operation Broken Fang Collection"
   },
   {
-    "id": 65,
+    "id": 66,
     "name": "CSGO_set_op10_t",
     "released": "3 December 2020",
     "stattrak": false,
@@ -528,11 +536,19 @@
     "tag": "The Havoc Collection"
   },
   {
-    "id": 66,
+    "id": 67,
     "name": "CSGO_set_op10_ancient",
     "released": "3 December 2020",
     "stattrak": false,
     "souvenir": false,
     "tag": "The Ancient Collection"
+  },
+  {
+    "id": 68,
+    "name": "CSGO_set_op10_characters",
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "Broken Fang Agents"
   }
 ]
