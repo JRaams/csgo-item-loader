@@ -7,18 +7,17 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"regexp"
 	"strings"
 )
 
 func parse() {
-	// fmt.Println("Parsing collections files!")
-	// collectionsByName := parseCollections()
-	// fmt.Println(collectionsByName)
+	fmt.Println("Parsing collections files...")
+	_ = parseCollections()
+	fmt.Println("resources/collections.json is up to date! Parsing weapons...")
 
-	fmt.Println("Parsing weapons")
-	weapons := parseWeapons()
-	fmt.Println(weapons)
+	// fmt.Println("Parsing weapons")
+	// weapons := parseWeapons()
+	// fmt.Println(weapons)
 }
 
 // Collection type
@@ -41,10 +40,6 @@ type Weapon struct {
 }
 
 func parseCollections() map[string]*Collection {
-	// Get actual collections from gamefiles
-	text := getTextBetweenLines("storage/csgo_english.txt", "// SET DESCRIPTIONS", "/////////////////")
-	vdf := parseVdf(text)
-
 	// Load collections from resources
 	collectionsBytes, err := ioutil.ReadFile("resources/collections.json")
 	if err != nil {
@@ -59,6 +54,9 @@ func parseCollections() map[string]*Collection {
 
 	// Check if all actual collections have an entry in resources/collections
 	// If not, it needs to be added manually
+	text := getTextBetweenLines("storage/csgo_english.txt", "// SET DESCRIPTIONS", "/////////////////")
+	vdf := parseVdf(text)
+
 	for key, value := range vdf {
 		// Do not check descriptions or short names
 		if strings.Contains(key, "_desc") || strings.Contains(key, "_short") {
@@ -82,16 +80,18 @@ func parseWeapons() []*Weapon {
 func parseVdf(lines []string) map[string]string {
 	vdf := map[string]string{}
 
-	spacePattern := regexp.MustCompile(`"\s+"`)
-
 	for _, line := range lines {
 		// Ignore empty lines or comments
-		if len(line) == 0 || line[0:2] == "//" {
+		if len(line) < 2 || line[0:2] == "//" {
 			continue
 		}
-		lineWithoutSpaces := spacePattern.ReplaceAllString(line, `""`)
+		lineWithoutSpaces := strings.ReplaceAll(strings.ReplaceAll(line, " ", ""), "\t", "");
 
 		parts := strings.Split(lineWithoutSpaces, `""`)
+		if len(parts) == 1 {
+			continue;
+		}
+
 		key := parts[0][1:]
 		value := ""
 
@@ -125,7 +125,7 @@ func getTextBetweenLines(file string, start string, end string) []string {
 			startIndent = countLeadingSpace(string(bytes))
 		}
 		if startIndent != -1 {
-			if line == end {
+			if strings.TrimSpace(line) == end {
 				if endIndent := countLeadingSpace(string(bytes)); endIndent == startIndent {
 					return lines
 				}

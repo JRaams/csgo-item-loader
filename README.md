@@ -2,64 +2,43 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/JRaams/csgo-item-loader)](https://goreportcard.com/report/github.com/JRaams/csgo-item-loader) [![License](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 
-## 1. Description
+Parses CS:GO weapons/skins from game files into api-ready json.
 
-Parses CS:GO items from game files into api-ready json.
-
-## 2. Requirements
+## Requirements
 
 Golang (v1.15.8): https://golang.org/dl/
 
-## 3. Usage
-
-#### 3.1 Building the app
+## Usage
 
 ```bash
-# Creates the csgo-item-loader executable
-$ go build 
-``` 
+$ go run .
+NAME:
+   csgo-item-loader - A new cli application
 
-#### 3.2 Commands 
+USAGE:
+   csgo-item-loader [global options] command [command options] [arguments...]
 
-##### 3.2.1 Downloading game files
+DESCRIPTION:
+   Parses CS:GO items from game files into api-ready json.
 
-```bash
-Command: 'download' (alias 'd')
-$ ./csgo-item-loader download
+COMMANDS:
+   download, d
+   parse, p
+   stitch, s
+   help, h      Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h  show help (default: false)
 ```
 
-Result:
-`./storage` folder with the following contents:
-- `csgo_english.txt`
-- `items_game_cdn.txt`
-- `items_game.txt`
+1. Download game files
+   `go run . d`
+   Writes to 'storage/'
 
-##### 3.2.2 Parsing game files into usable item data (todo)
+2. Parse VDF into json
+   `go run . p`
+   Writes to 'resources/'
 
-- [x] Parsing collections and checking that they correspond with the collections in `resources/collections.json`
-- [ ] Parsing weapons and weapontypes
-- [ ] Parsing paintkits
-- [ ] Parsing knives
-- [ ] Parsing gloves
-
-```bash
-Command 'parse' (alias 'p')
-$ ./csgo-item-loader parse
-```
-
-Result:
-`./resources` folder with the following contents:
-- [x] `collections.json` (Not automatically updated)
-- [ ] `weapons.json`
-- [ ] `paintkits.json`
-- [ ] `knives.json`
-- [ ] `gloves.json`
-
-##### 3.2.3 Stitching game data together (todo)
-
-Stitching weapons and paintkits together to create `resources/skins.json`
-
-```bash
-Command 'stitch' (alias 's')
-$ ./csgo-item-loader stitch
-```
+3. Stitch data
+   `go run . s`
+   Writes to 'output/'

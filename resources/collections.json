@@ -550,5 +550,13 @@
     "stattrak": false,
     "souvenir": false,
     "tag": "Broken Fang Agents"
+  },
+  {
+    "id": 69,
+    "name": "CSGO_set_community_28",
+    "released": "3 May 2021",
+    "stattrak": true,
+    "souvenir": false,
+    "tag": "The Snakebite Collection"
   }
 ]
