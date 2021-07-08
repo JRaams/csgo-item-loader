@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "simple-vdf": "^1.1.1"
+  },
+  "name": "csgo-item-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JRaams/csgo-item-loader.git",
+  "author": "JRaams <47593569+JRaams@users.noreply.github.com>",
+  "license": "MIT"
+}
