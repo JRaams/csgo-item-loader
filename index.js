@@ -6,7 +6,7 @@ import { Parser } from "./parser.js";
 async function main() {
   const args = new ArgLoader().load();
   const { download, parse, stitch, verbose } = args;
-  verbose && console.info(args);
+  verbose && console.info("Arguments:", args);
 
   if (download) {
     const downloader = new Downloader(verbose);

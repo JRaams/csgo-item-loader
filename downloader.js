@@ -35,23 +35,24 @@ export class Downloader {
   }
 
   async createAssetsFolder() {
-    this.isVerbose && console.info("Downloader createAssetsFolder start");
+    this.isVerbose && console.info("Downloader createAssetsFolder: start");
     try {
       await fs.promises.mkdir(ASSETS_FOLDER_PATH);
-      this.isVerbose && console.info("Downloader createAssetsFolder success");
+      this.isVerbose && console.info("Downloader createAssetsFolder: success");
     } catch (error) {
-      this.isVerbose && console.info("Downloader createAssetsFolder error");
+      this.isVerbose && console.info("Downloader createAssetsFolder: error");
     }
-    this.isVerbose && console.info("Downloader createAssetsFolder done");
+    this.isVerbose && console.info("Downloader createAssetsFolder: done");
   }
 
   async fetchFile({ fileName, url }) {
-    this.isVerbose && console.info("Downloader fetchFile start", fileName, url);
+    this.isVerbose &&
+      console.info("Downloader fetchFile: start", fileName, url);
     const response = await fetch(url).catch((e) => {
       console.info(e);
     });
     const data = await response.text();
     await fs.promises.writeFile(`${ASSETS_FOLDER_PATH}/${fileName}`, data);
-    this.isVerbose && console.info("Downloader fetchFile done");
+    this.isVerbose && console.info("Downloader fetchFile: done");
   }
 }
