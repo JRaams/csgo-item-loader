@@ -6,7 +6,7 @@
 
 ### Usage
 
-`node . -dpsv`
+`node . -dpv`
 
 ```bash
 $ node .

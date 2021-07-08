@@ -1,22 +1,25 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const ASSETS_TO_FETCH = [
+export const ASSETS_TO_FETCH = [
   {
-    fileName: "items_game",
+    fileName: "items_game.txt",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game.txt",
+    type: "vdf",
   },
   {
-    fileName: "items_game_cdn",
+    fileName: "items_game_cdn.txt",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game_cdn.txt",
+    type: "rawkeyvalue",
   },
   {
-    fileName: "csgo_english",
+    fileName: "csgo_english.txt",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/resource/csgo_english.txt",
+    type: "vdf",
   },
 ];
 
-const ASSETS_FOLDER_PATH = "./assets";
+export const ASSETS_FOLDER_PATH = "./assets";
 
 export class Downloader {
   constructor(isVerbose = false) {
@@ -48,7 +51,7 @@ export class Downloader {
       console.info(e);
     });
     const data = await response.text();
-    await fs.promises.writeFile(`${ASSETS_FOLDER_PATH}/${fileName}.txt`, data);
+    await fs.promises.writeFile(`${ASSETS_FOLDER_PATH}/${fileName}`, data);
     this.isVerbose && console.info("Downloader fetchFile done");
   }
 }
