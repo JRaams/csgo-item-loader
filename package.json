@@ -1,0 +1,14 @@
+{
+  "name": "csgo-item-loader",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JRaams/csgo-item-loader.git",
+  "author": "JRaams",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.1"
+  }
+}

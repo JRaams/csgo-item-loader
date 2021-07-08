@@ -1,3 +1,25 @@
 # CS:GO Item Loader
 
-refactoring from go/python to js...
+### Requirements
+
+- NodeJS
+
+### Usage
+
+`node . -dps`
+
+```bash
+$ node .
+
+CSGO Item Loader
+
+  Parses CS:GO weapons/skins from game files into api-ready json.
+
+Options
+
+  -h, --help        Print this usage guide.
+  -d, --download    Download vdf files from GameTracking-csgo repo
+  -p, --parse       Parse vdf into json
+  -s, --stitch      Stitch json together and output skin info
+
+```
