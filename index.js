@@ -5,10 +5,11 @@ import { Downloader } from "./downloader.js";
 
 async function main() {
   const args = new ArgLoader().load();
-  console.info(args);
+  const { download, parse, stitch, verbose } = args;
+  verbose && console.info(args);
 
-  if (args.download) {
-    const downloader = new Downloader();
+  if (download) {
+    const downloader = new Downloader(verbose);
     downloader.fetchVDLFiles();
   }
 }

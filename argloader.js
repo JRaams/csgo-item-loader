@@ -28,6 +28,12 @@ export class ArgLoader {
         alias: "s",
         type: Boolean,
       },
+      {
+        name: "verbose",
+        description: "Enable console logs with extra info",
+        alias: "v",
+        type: Boolean,
+      },
     ];
 
     this.usageSections = [

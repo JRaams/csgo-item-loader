@@ -6,7 +6,7 @@
 
 ### Usage
 
-`node . -dps`
+`node . -dpsv`
 
 ```bash
 $ node .
@@ -21,5 +21,6 @@ Options
   -d, --download    Download vdf files from GameTracking-csgo repo
   -p, --parse       Parse vdf into json
   -s, --stitch      Stitch json together and output skin info
+  -v, --verbose     Enable console logs with extra info
 
 ```
