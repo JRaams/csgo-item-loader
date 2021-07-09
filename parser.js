@@ -66,4 +66,78 @@ export class Parser {
 
     return JSON.stringify(result, null, 2);
   }
+
+  // 1. Read items_game.json
+  // 1.1 Read collections.meta.json
+  // 2. Get 'item_sets'
+  // 3. For each 'item_set'
+  //      check 'resources/collections.meta.json' for released/stattrak/souvenir data since it isnt available in game files
+  // 4. Export to assets/collections.json
+  async extractCollections() {
+    this.isVerbose && console.info("Parser extractCollections: start");
+
+    // 1 Read items_game.json
+    this.isVerbose &&
+      console.info("Parser extractCollections: loading items_game");
+    const items_game_txt = await fs.promises.readFile(
+      "./assets/items_game.json",
+      "utf-8"
+    );
+    const items_game = JSON.parse(items_game_txt);
+
+    // 1.1 Read collections.meta.json
+    this.isVerbose &&
+      console.info("Parser extractCollections: loading collections.meta");
+    const collections_meta_txt = await fs.promises.readFile(
+      "./resources/collections.meta.json",
+      "utf-8"
+    );
+    const collections_meta = JSON.parse(collections_meta_txt);
+
+    // 2 Get item_sets
+    const item_sets = items_game.items_game.item_sets;
+
+    // 3. For each 'item_set'
+    //      check 'resources/collections.meta.json' for released/stattrak/souvenir data since it isnt available in game files
+    const result = {};
+    for (const [name, obj] of Object.entries(item_sets)) {
+      const collection = {
+        name,
+        tag_token: obj.name,
+        desc_token: obj.set_description,
+      };
+
+      // Add meta
+      const meta = collections_meta[name];
+      if (!meta) {
+        console.info(
+          `Parser extractCollections: error: no metadata found in resources/collections.meta.json for '${name}'`
+        );
+        process.exit(1);
+      }
+      Object.assign(collection, meta);
+
+      // Add items
+      const items = [];
+      for (const vdfItem of Object.keys(obj.items)) {
+        const [paintKit, weapon] = vdfItem.replace("[", "").split("]");
+        items.push({
+          paintKit,
+          weapon,
+        });
+      }
+      collection.items = items;
+
+      result[name] = collection;
+    }
+
+    const exportPath = "./assets/collections.json";
+    this.isVerbose &&
+      console.info(
+        `Parser extractCollections: writing collections to ${exportPath}`
+      );
+    await fs.promises.writeFile(exportPath, JSON.stringify(result, null, 2));
+
+    this.isVerbose && console.info("Parser extractCollections: end");
+  }
 }

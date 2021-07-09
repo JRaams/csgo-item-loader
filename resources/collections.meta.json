@@ -1,0 +1,352 @@
+{
+  "set_vertigo": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_office": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_nuke": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_militia": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_inferno": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_dust": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_aztec": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_assault": {
+    "released": "14 August 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_weapons_i": {
+    "released": "14 August 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_esports": {
+    "released": "14 August 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_bravo_ii": {
+    "released": "19 September 2013",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_bravo_i": {
+    "released": "19 September 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_weapons_ii": {
+    "released": "8 November 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_mirage": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_train": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_safehouse": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_lake": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_italy": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_dust_2": {
+    "released": "27 November 2013",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_esports_ii": {
+    "released": "18 December 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_1": {
+    "released": "18 December 2013",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_weapons_iii": {
+    "released": "12 February 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_2": {
+    "released": "20 February 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_bank": {
+    "released": "1 May 2014",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_community_3": {
+    "released": "1 May 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_overpass": {
+    "released": "1 July 2014",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_baggage": {
+    "released": "1 July 2014",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_cobblestone": {
+    "released": "1 July 2014",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_community_4": {
+    "released": "1 July 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_esports_iii": {
+    "released": "10 July 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_cache": {
+    "released": "8 August 2014",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_community_5": {
+    "released": "11 November 2014",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_6": {
+    "released": "8 January 2015",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_7": {
+    "released": "15 April 2015",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_kimono": {
+    "released": "26 May 2015",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_gods_and_monsters": {
+    "released": "26 May 2015",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_chopshop": {
+    "released": "26 May 2015",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_community_8": {
+    "released": "26 May 2015",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_9": {
+    "released": "17 September 2015",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_10": {
+    "released": "8 December 2015",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_11": {
+    "released": "16 February 2016",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_12": {
+    "released": "27 April 2016",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_13": {
+    "released": "15 June 2016",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_gamma_2": {
+    "released": "18 August 2016",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_15": {
+    "released": "28 November 2016",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_16": {
+    "released": "15 March 2017",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_17": {
+    "released": "23 May 2017",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_18": {
+    "released": "14 September 2017",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_19": {
+    "released": "15 February 2018",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_20": {
+    "released": "02 August 2018",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_nuke_2": {
+    "released": "01 September 2018",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_inferno_2": {
+    "released": "01 September 2018",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_blacksite": {
+    "released": "06 December 2018",
+    "stattrak": false,
+    "souvenir": true
+  },
+  "set_community_21": {
+    "released": "06 December 2018",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_22": {
+    "released": "13 March 2019",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_xraymachine": {
+    "released": "30 September 2019",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_24": {
+    "released": "18 October 2019",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_stmarc": {
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_norse": {
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_canals": {
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_op9_characters": {
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_community_23": {
+    "released": "18 November 2019",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_25": {
+    "released": "31 March 2020",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_26": {
+    "released": "6 August 2020",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_community_27": {
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_op10_ct": {
+    "released": "3 December 2020",
+    "stattrak": true,
+    "souvenir": false
+  },
+  "set_op10_t": {
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_op10_ancient": {
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_op10_characters": {
+    "released": "3 December 2020",
+    "stattrak": false,
+    "souvenir": false
+  },
+  "set_community_28": {
+    "released": "3 May 2021",
+    "stattrak": true,
+    "souvenir": false
+  }
+}

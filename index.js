@@ -16,6 +16,7 @@ async function main() {
   if (parse) {
     const parser = new Parser(verbose);
     await parser.parseAssets();
+    await parser.extractCollections();
   }
 }
 main();
