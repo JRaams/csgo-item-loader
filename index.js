@@ -19,6 +19,7 @@ async function main() {
     await parser.extractCollections();
     await parser.extractWeapons();
     await parser.extractPaintKits();
+    await parser.extractRarities();
   }
 }
 main();

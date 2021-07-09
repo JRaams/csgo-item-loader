@@ -221,4 +221,47 @@ export class Parser {
 
     this.isVerbose && console.info("Parser extractPaintKits: end");
   }
+
+  async extractRarities() {
+    this.isVerbose && console.info("Parser extractRarities: start");
+
+    // Read items_game.json and extract colors and rarities
+    this.isVerbose &&
+      console.info("Parser extractRarities: loading items_game");
+    const items_game_txt = await fs.promises.readFile(
+      "./assets/items_game.json",
+      "utf-8"
+    );
+    const colorData = JSON.parse(items_game_txt).items_game.colors;
+    const colors = {};
+    for (const [key, obj] of Object.entries(colorData)) {
+      colors[key] = obj.hex_color;
+    }
+    const rarities = JSON.parse(items_game_txt).items_game.rarities;
+
+    // Extract rarities
+    this.isVerbose &&
+      console.info(`Parser extractPaintKits: extracting rarities`);
+    const result = {};
+    for (const [key, obj] of Object.entries(rarities)) {
+      result[key] = {
+        name: key,
+        value: obj.value,
+        color: colors[obj.color],
+        tag_token: obj.loc_key,
+        tag_token_character: obj.loc_key_character,
+        tag_token_weapon: obj.loc_key_weapon,
+      };
+    }
+
+    // Export to file
+    const exportPath = "./assets/rarities.json";
+    this.isVerbose &&
+      console.info(
+        `Parser extractPaintKits: writing rarities to ${exportPath}`
+      );
+    await fs.promises.writeFile(exportPath, JSON.stringify(result, null, 2));
+
+    this.isVerbose && console.info("Parser extractRarities: end");
+  }
 }

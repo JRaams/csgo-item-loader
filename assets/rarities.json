@@ -1,0 +1,74 @@
+{
+  "default": {
+    "name": "default",
+    "value": "0",
+    "color": "#6a6156",
+    "tag_token": "Rarity_Default",
+    "tag_token_character": "Rarity_Default_Character",
+    "tag_token_weapon": "Rarity_Default_Weapon"
+  },
+  "common": {
+    "name": "common",
+    "value": "1",
+    "color": "#b0c3d9",
+    "tag_token": "Rarity_Common",
+    "tag_token_character": "Rarity_Common_Character",
+    "tag_token_weapon": "Rarity_Common_Weapon"
+  },
+  "uncommon": {
+    "name": "uncommon",
+    "value": "2",
+    "color": "#5e98d9",
+    "tag_token": "Rarity_Uncommon",
+    "tag_token_character": "Rarity_Uncommon_Character",
+    "tag_token_weapon": "Rarity_Uncommon_Weapon"
+  },
+  "rare": {
+    "name": "rare",
+    "value": "3",
+    "color": "#4b69ff",
+    "tag_token": "Rarity_Rare",
+    "tag_token_character": "Rarity_Rare_Character",
+    "tag_token_weapon": "Rarity_Rare_Weapon"
+  },
+  "mythical": {
+    "name": "mythical",
+    "value": "4",
+    "color": "#8847ff",
+    "tag_token": "Rarity_Mythical",
+    "tag_token_character": "Rarity_Mythical_Character",
+    "tag_token_weapon": "Rarity_Mythical_Weapon"
+  },
+  "legendary": {
+    "name": "legendary",
+    "value": "5",
+    "color": "#d32ce6",
+    "tag_token": "Rarity_Legendary",
+    "tag_token_character": "Rarity_Legendary_Character",
+    "tag_token_weapon": "Rarity_Legendary_Weapon"
+  },
+  "ancient": {
+    "name": "ancient",
+    "value": "6",
+    "color": "#eb4b4b",
+    "tag_token": "Rarity_Ancient",
+    "tag_token_character": "Rarity_Ancient_Character",
+    "tag_token_weapon": "Rarity_Ancient_Weapon"
+  },
+  "immortal": {
+    "name": "immortal",
+    "value": "7",
+    "color": "#e4ae39",
+    "tag_token": "Rarity_Contraband",
+    "tag_token_character": "Rarity_Contraband_Character",
+    "tag_token_weapon": "Rarity_Contraband_Weapon"
+  },
+  "unusual": {
+    "name": "unusual",
+    "value": "99",
+    "color": "#ffd700",
+    "tag_token": "Unusual",
+    "tag_token_character": "Rarity_Unusual",
+    "tag_token_weapon": "Rarity_Unusual"
+  }
+}
