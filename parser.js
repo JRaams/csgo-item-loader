@@ -140,4 +140,50 @@ export class Parser {
 
     this.isVerbose && console.info("Parser extractCollections: end");
   }
+
+  async extractWeapons() {
+    this.isVerbose && console.info("Parser extractWeapons: start");
+
+    // 1 Read items_game.json
+    this.isVerbose &&
+      console.info("Parser extractCollections: loading items_game");
+    const items_game_txt = await fs.promises.readFile(
+      "./assets/items_game.json",
+      "utf-8"
+    );
+    const items_game = JSON.parse(items_game_txt);
+
+    // Parse weapons
+    const result = {};
+    for (const [idStr, obj] of Object.entries(items_game.items_game.items)) {
+      const id = Number(idStr);
+      if (!obj.name.includes("weapon")) continue;
+
+      // obj.name = 'weapon_deagle'
+      // weapon_prefab = 'weapon_deagle_prefab'
+      // weapon_category_prefab = 'Pistol'
+      const weapon_prefab = items_game.items_game.prefabs[obj.prefab];
+      const weapon_category_prefab =
+        items_game.items_game.prefabs[weapon_prefab.prefab];
+
+      weapon_prefab.category_prefab = weapon_category_prefab;
+
+      const weapon = {
+        id,
+        name: obj.name,
+        prefab: weapon_prefab,
+      };
+      result[obj.name] = weapon;
+    }
+
+    // Export weapon data
+    const exportPath = "./assets/weapons.json";
+    this.isVerbose &&
+      console.info(
+        `Parser extractCollections: writing weapons to ${exportPath}`
+      );
+    await fs.promises.writeFile(exportPath, JSON.stringify(result, null, 2));
+
+    this.isVerbose && console.info("Parser extractWeapons: end");
+  }
 }

@@ -17,6 +17,7 @@ async function main() {
     const parser = new Parser(verbose);
     await parser.parseAssets();
     await parser.extractCollections();
+    await parser.extractWeapons();
   }
 }
 main();
