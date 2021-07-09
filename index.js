@@ -18,6 +18,7 @@ async function main() {
     await parser.parseAssets();
     await parser.extractCollections();
     await parser.extractWeapons();
+    await parser.extractPaintKits();
   }
 }
 main();

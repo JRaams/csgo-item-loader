@@ -186,4 +186,39 @@ export class Parser {
 
     this.isVerbose && console.info("Parser extractWeapons: end");
   }
+
+  async extractPaintKits() {
+    this.isVerbose && console.info("Parser extractPaintKits: start");
+
+    // Read items_game.json
+    this.isVerbose &&
+      console.info("Parser extractPaintKits: loading items_game");
+    const items_game_txt = await fs.promises.readFile(
+      "./assets/items_game.json",
+      "utf-8"
+    );
+    const paint_kits = JSON.parse(items_game_txt).items_game.paint_kits;
+
+    // Extract paintkits
+    this.isVerbose &&
+      console.info("Parser extractPaintKits: extracting paintkits");
+    const result = {};
+    for (let [idStr, obj] of Object.entries(paint_kits)) {
+      const id = Number(idStr);
+      result[obj.name] = {
+        id,
+        ...obj,
+      };
+    }
+
+    // Export to file
+    const exportPath = "./assets/paintkits.json";
+    this.isVerbose &&
+      console.info(
+        `Parser extractPaintKits: writing paintkits to ${exportPath}`
+      );
+    await fs.promises.writeFile(exportPath, JSON.stringify(result, null, 2));
+
+    this.isVerbose && console.info("Parser extractPaintKits: end");
+  }
 }
